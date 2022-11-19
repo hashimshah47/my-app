@@ -22,43 +22,42 @@ function LandingPage() {
   return (
     <>
       <Container className="wrapper">
-        
-          <div>
-            {landingPage && 
-            <>
-            <Row>
-            <div className="name">Decentralized Voting System</div>
-            <div className="logo">
-              <img src={logo} alt="logo" height={200} />
-            </div>
-            </Row>
-            </>}
-            
-            <Row>
-              { signin && <Col><SignIn/></Col>}
-              <Col>
-            <div className="middle-img">
-              <img src={middle_img} alt="mid" height={500} />
-            </div>
-            </Col>
-            </Row>
+        {
+          // landingPage &&
 
-            {landingPage && (<Row>
+          <Row>
+            <div className="name-logo">
+              <img src={logo} alt="logo" height={200} />
+              &nbsp;&nbsp;&nbsp;Decentralized Voting System
+            </div>
+          </Row>
+        }
+
+        <Row>
+          {signin && (
+            <Col>
+              <SignIn />
+            </Col>
+          )}
+          <Col>
+            <div className="middle-img">
+              <img src={middle_img} alt="mid" height={600} />
+            </div>
+          </Col>
+        </Row>
+
+        {landingPage && (
+          <Row>
             <div className="buttons">
-              <button
-                className="signin"
-                size="lg"
-                onClick={handleChange}
-              >
+              <button className="signin" size="lg" onClick={handleChange}>
                 Sign In
               </button>{" "}
               <button className="register" size="lg">
                 Register
               </button>{" "}
             </div>
-            </Row>)}
-           </div>
-
+          </Row>
+        )}
       </Container>
     </>
   );

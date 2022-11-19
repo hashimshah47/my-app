@@ -4,25 +4,21 @@
     padding: auto;
     text-align: center;
 }
-.logo{
-    height: 30px;
-    width: 30px;
-    margin-top: 20px;
-}
-
-.name{
+.name-logo{
     color: aliceblue;
     font-size: 40px;
     font: bold;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+.name-logo img{
+    height: auto;
+    width: 126px;
+    margin-top: 20px;
+}
 .wrapper{
     background-image: url("../images/background-ovals-2.png");
     background-size: cover;
-    /* padding: 1rem; */
-    height: 720px;
-    /* width: auto; */
+    height:100vh;
     max-width: inherit;
     margin-left: 0px;
     margin-top: 0px;

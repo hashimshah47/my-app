@@ -1,42 +1,44 @@
-.signin-page{
-    width: 420px;
-    margin-right: 10%;
-    margin-left: 25%;
-    margin-top: 10%;
-    margin-bottom: 10px;
+.reg-page{
     background: #FFFFFF;
-    border: 1px solid #311649;
+    border: 1px solid #1B1E6C;
     border-radius: 10px;
+
+    width: 450px;
+    margin-right: 20%;
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-bottom: 5px;
 }
-.signin-page .signin-panel{
+.reg-page .reg-panel{
     width: auto;
-    height: 500px;
+    height: 530px;
     padding: 5%;
 }
-.signin-panel .title{
+
+.reg-panel .title{
     font-size: 34px;
     line-height: 47px;
+    color: #1B1E6C;
     
-    align-items: center;
     text-align: center;
     text-decoration-line: underline;
     font-variant: small-caps;
 }
 
-.signin-panel .input-field{
+
+.reg-panel .input-field{
     padding-left: 1%;
     padding-right: 1%;
 
-    margin-top: 15%;
+    margin-top: 10%;
 }
-
-.signin-panel .input-field label{
-    color: #6534b2;
+.reg-panel .input-field label{
+    color: #242ce5;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
 }
-.signin-panel .input-field input{
+.reg-panel .input-field input{
     font-size: 24px;
     padding: 3%;
     width: 100%;
@@ -46,19 +48,16 @@
     border-radius: 10px;
 }
 
-
-
-.signin-panel .enter-field{
+.reg-panel .enter-field{
+    margin-top: 20%;
     height: 48px;
-    margin-top: 33%;
 }
-.signin-panel .enter-btn{
-    color:white;
-    border: none;
+.reg-panel .enter-btn{
     margin: auto;
+    color:white;
+    background: #1B1E6C;
     width: 160.49px;
     height: 51px;
-    
-    background: #311649;
+    border: none;
     border-radius: 45px 45px 10px 10px;
 }

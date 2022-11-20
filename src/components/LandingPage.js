@@ -6,15 +6,22 @@ import middle_img from "../images/middle-img.png";
 import logo from "../images/logo.png";
 import "./LandingPage.css";
 import SignIn from "./SignIn";
+import Registeration from "./Registeration";
 import { useState } from "react";
 
 function LandingPage() {
   const [signin, setSignIn] = useState(false);
+  const [reg, setReg] = useState(false);
   const [landingPage, setLandingPage] = useState(true);
 
   function handleChange(event) {
     if (event.target.innerText == "Sign In") {
       setSignIn(true);
+      setReg(false);
+      setLandingPage(false);
+    } else if (event.target.innerText == "Register") {
+      setReg(true);
+      setSignIn(false);
       setLandingPage(false);
     }
   }
@@ -22,16 +29,12 @@ function LandingPage() {
   return (
     <>
       <Container className="wrapper">
-        {
-          // landingPage &&
-
-          <Row>
-            <div className="name-logo">
-              <img src={logo} alt="logo" height={200} />
-              &nbsp;&nbsp;&nbsp;Decentralized Voting System
-            </div>
-          </Row>
-        }
+        <Row>
+          <div className="name-logo">
+            <img src={logo} alt="logo" height={200} />
+            &nbsp;&nbsp;&nbsp;Decentralized Voting System
+          </div>
+        </Row>
 
         <Row>
           {signin && (
@@ -44,6 +47,11 @@ function LandingPage() {
               <img src={middle_img} alt="mid" height={600} />
             </div>
           </Col>
+          {reg && (
+            <Col>
+              <Registeration />
+            </Col>
+          )}
         </Row>
 
         {landingPage && (
@@ -52,7 +60,7 @@ function LandingPage() {
               <button className="signin" size="lg" onClick={handleChange}>
                 Sign In
               </button>{" "}
-              <button className="register" size="lg">
+              <button className="register" size="lg" onClick={handleChange}>
                 Register
               </button>{" "}
             </div>
